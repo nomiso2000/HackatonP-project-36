@@ -18,6 +18,8 @@ export async function getId(e) {
 
     const result = await API.getMovieByID(filmId);
     const newMurk = singlePage(result.data);
+    refs.container.classList.add('container_single');
+    refs.pagintatonClick.classList.add('hideSearch');
 
     refs.container.innerHTML = newMurk;
     const watchedBtn = document.querySelector('[data-action="watched-films"]');
@@ -58,6 +60,7 @@ export const starterMainPage = async () => {
   let totalResults = Math.ceil(result.data.total_results / 20);
   const context = 'mainPage';
   Pagination.Init(totalResults, context);
+
   const markupResult = await API.getMovies();
   const markup = movieList(markupResult);
   hideBtns();

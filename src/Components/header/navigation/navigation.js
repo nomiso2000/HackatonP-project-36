@@ -54,14 +54,18 @@ export const navigationModule = array => {
         starterMainPage();
         showSearch();
         hideBtns();
-        // APIhelpers.page = 1;
-
+        APIhelpers.page = 1;
+        refs.pagintatonClick.classList.remove('hideSearch');
+        refs.container.classList.remove('container_single');
         break;
       case 'library':
         addHeaderClass();
         displayWatched();
         hideSearch();
         showBtns();
+
+        refs.pagintatonClick.classList.add('hideSearch');
+        refs.container.classList.add('container_single');
 
         const watchingArray = JSON.parse(localStorage.getItem('watched')) || [];
 

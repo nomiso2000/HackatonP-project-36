@@ -11,8 +11,11 @@ function realizeClick() {
   starterMainPage();
   showSearch();
   removeSingleHeaderClass();
+  APIhelpers.page = 1;
   const activeElement = document.querySelector('.active');
   activeElement.classList.remove('active');
   const jsHome = document.querySelector('.js-home');
   jsHome.classList.add('active');
+  refs.pagintatonClick.classList.remove('hideSearch');
+  refs.container.classList.remove('container_single');
 }
