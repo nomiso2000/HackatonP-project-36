@@ -476,6 +476,9 @@ h3 {
       ),
       url('../src/img/img_header/header_bckg_single.jpg');
   }
+  .container {
+    height: 9000px;
+  }
 }
 
 /* MEDIA TABLET */
@@ -515,6 +518,7 @@ h3 {
   }
   .container {
     width: 768px;
+    height: 4500px;
   }
 
   .movies_list {
